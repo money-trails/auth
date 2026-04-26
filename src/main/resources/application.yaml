@@ -1,3 +1,28 @@
 spring:
   application:
     name: auth
+  config:
+    import: optional:config
+  cloud:
+    config:
+      enabled: false
+      import-check:
+        enabled: false
+
+  datasource:
+    url: jdbc:h2:mem:users
+    username: trails
+    password: moneytrails
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
