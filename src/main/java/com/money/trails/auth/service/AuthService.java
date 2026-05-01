@@ -1,9 +1,11 @@
 package com.money.trails.auth.service;
 
 import com.money.trails.auth.dto.AuthResponse;
-import com.money.trails.auth.dto.LoginRequest;
+import com.money.trails.auth.dto.SigninRequest;
+import com.money.trails.auth.dto.SignupRequest;
 
 public interface AuthService {
 
-    AuthResponse login(LoginRequest request);
+    AuthResponse signin(SigninRequest request);
+    AuthResponse signup(SignupRequest request);
 }
